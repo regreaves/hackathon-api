@@ -30,7 +30,7 @@ router.get('/event_applications/:event_application_id',
            validateAccessToken,
            checkRequiredPermissions(GET_EVENT_APPLICATION_PERMISSIONS),
            async (req, res) => {
-  const data = await getEventApplication();
+  const data = await getEventApplication(req.params.event_application_id);
 
   res.status(200).json(data);
 });
