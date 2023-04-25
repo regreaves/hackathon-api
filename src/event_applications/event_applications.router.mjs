@@ -18,8 +18,8 @@ const router = express.Router();
 router.get('/event_applications',
            validateAccessToken,
            checkRequiredPermissions(LIST_EVENT_APPLICATIONS_PERMISSIONS),
-           (req, res) => {
-  const data = listEventApplications();
+           async (req, res) => {
+  const data = await listEventApplications();
 
   res.status(200).json(data);
 });
