@@ -29,7 +29,9 @@ app.use(cors({
   allowedHeaders: [ 'Authorization', 'Content-Type' ]
 }));
 
-app.use('/api/v2023-04-24', event_applications);
+app.use('/', [
+  event_applications
+]);
 
 app.use((err, req, res, next) => {
   res.status(err.status ?? 500).json({
