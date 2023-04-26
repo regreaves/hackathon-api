@@ -2,6 +2,7 @@ import express from 'express';
 
 import {
   GET_EVENT_APPLICATION_PERMISSIONS,
+  GET_EVENT_APPLICATIONS_SUMMARY_PERMISSIONS,
   LIST_EVENT_APPLICATIONS_PERMISSIONS
 } from './event_applications.permissions.mjs';
 
@@ -37,7 +38,7 @@ router.get('/event_applications/:event_application_id',
 
 router.get('/event_applications/summary',
            validateAccessToken,
-           checkRequiredPermissions(GET_EVENT_APPLICATIONS_SUMMARY),
+           checkRequiredPermissions(GET_EVENT_APPLICATIONS_SUMMARY_PERMISSIONS),
            async (req, res) => {
   const data = await getEventApplicationSummary();
 
