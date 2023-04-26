@@ -35,4 +35,13 @@ router.get('/event_applications/:event_application_id',
   res.status(200).json(data);
 });
 
+router.get('/event_applications/summary',
+           validateAccessToken,
+           checkRequiredPermissions(GET_EVENT_APPLICATIONS_SUMMARY),
+           async (req, res) => {
+  const data = await getEventApplicationSummary();
+
+  res.status(200).json(data);
+});
+
 export { router };
