@@ -17,6 +17,20 @@ export async function getEventApplication(event_application_id) {
   return { data };
 }
 
+export async function getEventApplicationsSummary() {
+  const session = await mysqlx.getSession(config);
+
+  const response = await session
+      .sql('CALL get_event_applications_summary();')
+      .execute();
+
+  const data = await response.fetchAll();
+
+  session.close();
+
+  return { data };
+}
+
 export async function listEventApplications() {
   const session = await mysqlx.getSession(config);
 
