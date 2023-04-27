@@ -34,7 +34,7 @@ router.post('/event_applications',
            validateAccessToken,
            checkRequiredPermissions(CREATE_EVENT_APPLICATION_PERMISSIONS),
            async (req, res) => {
-  const data = await createEventApplication();
+  const data = await createEventApplication(req.body.event_application);
 
   res.status(200).json(data);
 });
