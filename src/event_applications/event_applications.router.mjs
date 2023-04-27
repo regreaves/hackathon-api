@@ -10,7 +10,7 @@ import {
 import {
   createEventApplication,
   getEventApplication,
-  getEventApplicationSummary,
+  getEventApplicationsSummary,
   listEventApplications
 } from './event_applications.service.mjs';
 
@@ -52,7 +52,7 @@ router.get('/event_applications/summary',
            validateAccessToken,
            checkRequiredPermissions(GET_EVENT_APPLICATIONS_SUMMARY_PERMISSIONS),
            async (req, res) => {
-  const data = await getEventApplicationSummary();
+  const data = await getEventApplicationsSummary();
 
   res.status(200).json(data);
 });
