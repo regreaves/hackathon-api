@@ -27,6 +27,15 @@ router.get('/event_applications',
   res.status(200).json(data);
 });
 
+router.post('/event_applications',
+           validateAccessToken,
+           checkRequiredPermissions(CREATE_EVENT_APPLICATION_PERMISSIONS),
+           async (req, res) => {
+  const data = await createEventApplication();
+
+  res.status(200).json(data);
+});
+
 router.get('/event_applications/:event_application_id',
            validateAccessToken,
            checkRequiredPermissions(GET_EVENT_APPLICATION_PERMISSIONS),
