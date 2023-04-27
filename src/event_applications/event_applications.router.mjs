@@ -1,13 +1,16 @@
 import express from 'express';
 
 import {
+  CREATE_EVENT_APPLICATION_PERMISSIONS,
   GET_EVENT_APPLICATION_PERMISSIONS,
   GET_EVENT_APPLICATIONS_SUMMARY_PERMISSIONS,
   LIST_EVENT_APPLICATIONS_PERMISSIONS
 } from './event_applications.permissions.mjs';
 
 import {
+  createEventApplication,
   getEventApplication,
+  getEventApplicationSummary,
   listEventApplications
 } from './event_applications.service.mjs';
 
