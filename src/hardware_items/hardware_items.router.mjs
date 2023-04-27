@@ -8,7 +8,7 @@ import {
 import {
   createHardwareItem,
   listHardwareItems
-} from './event_applications.service.mjs';
+} from './hardware_items.service.mjs';
 
 import {
   checkRequiredPermissions,
