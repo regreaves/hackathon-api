@@ -26,7 +26,7 @@ router.get('/hardware_items',
   res.status(200).json(data);
 });
 
-router.post('/event_applications',
+router.post('/hardware_items',
             validateAccessToken,
             checkRequiredPermissions(CREATE_HARDWARE_ITEMS_PERMISSIONS),
             async (req, res) => {
