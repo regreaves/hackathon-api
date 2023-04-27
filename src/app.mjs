@@ -14,6 +14,10 @@ import {
 } from './event_applications/event_applications.router.mjs';
 
 import {
+  router as hardware_items
+} from './hardware_items/hardware_items.router.mjs';
+
+import {
   router as users
 } from './users/users.router.mjs';
 
