@@ -13,6 +13,10 @@ import {
   router as event_applications
 } from './event_applications/event_applications.router.mjs';
 
+import {
+  router as users
+} from './users/users.router.mjs';
+
 const app = express();
 
 app.use(express.json());
@@ -30,7 +34,8 @@ app.use(cors({
 }));
 
 app.use('/', [
-  event_applications
+  event_applications,
+  users
 ]);
 
 app.use((err, req, res, next) => {
