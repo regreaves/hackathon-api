@@ -12,7 +12,9 @@ export async function createUser(user) {
       .bind(sub)
       .execute();
 
+  const data = await response.fetchAll();
+
   session.close();
 
-  return;
+  return { data };
 }
