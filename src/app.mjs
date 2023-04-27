@@ -33,9 +33,11 @@ app.use(helmet({
 
 app.use(nocache());
 
+/*
 app.use(cors({
   allowedHeaders: [ 'Authorization', 'Content-Type' ]
 }));
+*/
 
 app.use('/', [
   event_applications,
