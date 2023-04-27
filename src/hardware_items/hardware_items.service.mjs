@@ -2,10 +2,7 @@ import mysqlx from '@mysql/xdevapi';
 
 const config = process.env.MYSQLX_CONFIG;
 
-export async function createHardwareItem(hardware_item) {
-  const {
-    name, link, category, status, location
-  } = hardware_item;
+export async function createHardwareItem(name, link, category, status, location) {
   
   const session = await mysqlx.getSession(config);
 

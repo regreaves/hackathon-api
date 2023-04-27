@@ -30,7 +30,9 @@ router.post('/hardware_items',
             validateAccessToken,
             checkRequiredPermissions(CREATE_HARDWARE_ITEMS_PERMISSIONS),
             async (req, res) => {
-  await createHardwareItem(req.body.hardware_item);
+  const { name, link, category, status, location } = req.body;
+
+  await createHardwareItem(name, link, category, status, location);
 
   res.status(201).end();
 });
