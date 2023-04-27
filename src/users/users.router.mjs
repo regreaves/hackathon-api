@@ -23,6 +23,7 @@ router.get('/users',
   const data = await getUser(req.body.user);
 
   res.status(200).json(data);
+});
 
 router.post('/users',
             validateAccessToken,
