@@ -36,7 +36,7 @@ router.post('/event_applications',
            async (req, res) => {
   const data = await createEventApplication(req.body.event_application);
 
-  res.status(200).json(data);
+  res.status(201).json(data);
 });
 
 router.get('/event_applications/:event_application_id',
