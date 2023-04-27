@@ -17,9 +17,9 @@ const router = express.Router();
 
 router.post('/users',
             validateAccessToken,
-            check(CREATE_USER_PERMISSIONS),
+            checkRequiredPermissions(CREATE_USER_PERMISSIONS),
             async (req, res) => {
-  const data = await createUser(req.body.user);
+  await createUser(req.body.user);
 
   res.status(201).end();
 });
