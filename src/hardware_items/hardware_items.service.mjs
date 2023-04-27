@@ -4,7 +4,7 @@ const config = process.env.MYSQLX_CONFIG;
 
 export async function createHardwareItem(event_application) {
   const {
-
+    name, link, category, status, location
   } = event_application;
   
   const session = await mysqlx.getSession(config);
