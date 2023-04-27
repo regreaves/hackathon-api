@@ -44,11 +44,9 @@ export async function createEventApplication(event_application) {
             linked_in)
       .execute();
 
-  const data = await response.fetchAll();
-
   session.close();
 
-  return { data };
+  return;
 }
 
 export async function getEventApplication(event_application_id) {
