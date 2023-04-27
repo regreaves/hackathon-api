@@ -6,7 +6,8 @@ import {
 } from './users.permissions.mjs';
 
 import {
-  createUser
+  createUser,
+  getUser
 } from './users.service.mjs';
 
 import {
