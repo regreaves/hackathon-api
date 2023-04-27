@@ -39,6 +39,7 @@ app.use(cors({
 
 app.use('/', [
   event_applications,
+  hardware_items,
   users
 ]);
 
