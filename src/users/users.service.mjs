@@ -7,12 +7,14 @@ export async function createUser(user) {
 
   const session = await mysqlx.getSession(config);
 
+  let uid;
+
   const response = await session
-      .sql('CALL create_user(?);')
-      .bind(sub)
+      .sql('CALL create_user(?, ?);')
+      .bind(sub, uid)
       .execute();
 
-  const data = await response.fetchAll();
+  const data = uid;
 
   session.close();
 
