@@ -1,3 +1,5 @@
+export const CREATE_EVENT_APPLICATION_PERMISSIONS = [ ];
+
 export const GET_EVENT_APPLICATION_PERMISSIONS = [
   'read:event_application'
 ];
