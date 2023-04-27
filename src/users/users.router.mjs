@@ -2,7 +2,7 @@ import express from 'express';
 
 import {
   CREATE_USER_PERMISSIONS,
-  GET_USER_PERMISSIONS
+  READ_USER_PERMISSIONS
 } from './users.permissions.mjs';
 
 import {
@@ -19,7 +19,7 @@ const router = express.Router();
 
 router.get('/users',
             validateAccessToken,
-            checkRequiredPermissions(GET_USER_PERMISSIONS),
+            checkRequiredPermissions(READ_USER_PERMISSIONS),
             async (req, res) => {
   const data = await getUser(req.body.user);
 
