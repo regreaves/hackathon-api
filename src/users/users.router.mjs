@@ -20,7 +20,9 @@ router.get('/users',
             validateAccessToken,
             checkRequiredPermissions(GET_USER_PERMISSIONS),
             async (req, res) => {
-  await getUser(req.body.user);
+  const data = await getUser(req.body.user);
+
+  res.status(200).json(data);
 
 router.post('/users',
             validateAccessToken,
