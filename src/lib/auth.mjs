@@ -16,7 +16,7 @@ export const checkRequiredPermissions = requiredPermissions => {
 
       const hasPermissions =
           requiredPermissions.every(requiredPermission =>
-        permissions.includes(requiredPermission));
+              permissions.includes(requiredPermission));
 
       if (!hasPermissions) {
         throw new InsufficientScopeError();
