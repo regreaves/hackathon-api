@@ -28,6 +28,8 @@ app.use(cors({
     'Authorization',
     'Content-Type'
   ]
+//  maxAge: 86400,
+//  origin: CLIENT_ORIGIN_URL
 }));
 app.use(express.json());
 /*
