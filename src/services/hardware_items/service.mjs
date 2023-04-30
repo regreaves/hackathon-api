@@ -13,25 +13,25 @@ export async function createHardwareItem() {
 }
 
 export async function deleteHardwareItem(hardwareItemID) {
-  const [ err, data ] = await executeSQL(
+  const [ error, data ] = await executeSQL(
       'CALL delete_hardware_item(?);',
       hardwareItemID);
 
-  return { err, data };
+  return { data, error };
 }
 
 export async function listHardwareItems() {
-  const [ err, data ] = await executeSQL('CALL list_hardware_items;');
+  const [ error, data ] = await executeSQL('CALL list_hardware_items;');
 
-  return { err, data };
+  return { data, error };
 }
 
 export async function readHardwareItem(hardwareItemID) {
-  const [ err, data ] = await executeSQL(
+  const [ error, data ] = await executeSQL(
       'CALL read_hardware_item(?);',
       hardwareItemID);
 
-  return { err, data };
+  return { data, error };
 }
 
 export async function updateHardwareItem(hardwareItemID) {

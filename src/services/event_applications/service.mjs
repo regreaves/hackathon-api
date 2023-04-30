@@ -13,25 +13,25 @@ export async function createEventApplication() {
 }
 
 export async function deleteEventApplication(eventApplicationID) {
-  const [ err, data ] = await executeSQL(
+  const [ error, data ] = await executeSQL(
       'CALL delete_event_application(?);',
       eventApplicationID);
 
-  return { err, data };
+  return { data, error };
 }
 
 export async function listEventApplications() {
-  const [ err, data ] = await executeSQL('CALL list_event_applications;');
+  const [ error, data ] = await executeSQL('CALL list_event_applications;');
 
-  return { err, data };
+  return { data, error };
 }
 
 export async function readEventApplication(eventApplicationID) {
-  const [ err, data ] = await executeSQL(
+  const [ error, data ] = await executeSQL(
       'CALL read_event_application(?);',
       eventApplicationID);
 
-  return { err, data };
+  return { data, error };
 }
 
 export async function updateEventApplication(eventApplicationID) {

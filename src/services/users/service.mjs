@@ -9,11 +9,11 @@ import {
 } from '../../lib/database.mjs';
 
 export async function checkInUser(userID) {
-  const [ err, data ] = await executeSQL(
+  const [ error, data ] = await executeSQL(
       'CALL check_in_user(?);',
       userID);
 
-  return { err, data };
+  return { data, error };
 }
 
 export async function createUser() {
@@ -21,25 +21,25 @@ export async function createUser() {
 }
 
 export async function deleteUser(userID) {
-  const [ err, data ] = await executeSQL(
+  const [ error, data ] = await executeSQL(
       'CALL delete_user(?);',
       userID);
 
-  return { err, data };
+  return { data, error };
 }
 
 export async function listUsers() {
-  const [ err, data ] = await executeSQL('CALL list_users;');
+  const [ error, data ] = await executeSQL('CALL list_users;');
 
-  return { err, data };
+  return { data, error };
 }
 
 export async function readUser(subject) {
-  const [ err, data ] = await executeSQL(
+  const [ error, data ] = await executeSQL(
       'CALL read_user(?);',
       subject);
 
-  return { err, data };
+  return { data, error };
 }
 
 export async function updateUser(userID) {
