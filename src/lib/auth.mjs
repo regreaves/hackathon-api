@@ -15,7 +15,7 @@ export const checkRequiredPermissions = requiredPermissions => {
       const permissions = payload.permissions || [];
 
       const hasPermissions =
-            requiredPermissions.every(requiredPermission =>
+          requiredPermissions.every(requiredPermission =>
         permissions.includes(requiredPermission));
 
       if (!hasPermissions) {
