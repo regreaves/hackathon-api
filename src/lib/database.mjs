@@ -21,6 +21,7 @@ export async function executeSQL(statement, ...bindings) {
 
     return [ null, result ];
   } catch (err) {
+    // TODO (REG): Error-handling middleware (handling MySQL errors)
     err.message = 'Something went wrong.';
 
     return [ err.message, null ];
