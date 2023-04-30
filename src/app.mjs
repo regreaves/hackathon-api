@@ -37,7 +37,7 @@ app.use(helmet({
 */
 app.use(nocache());
 
-app.use('/api', validateAccessToken(), [
+app.use('/api', validateAccessToken, [
   event_applications,
   hardware_items
 ]);
