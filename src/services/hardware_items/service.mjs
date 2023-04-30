@@ -8,16 +8,6 @@ import {
   executeSQL
 } from '../../lib/database.mjs';
 
-export async function checkHardwareItem(hardwareItemID, userID) {
-  const [ err, data ] = await executeSQL(
-//      'CALL check_hardware_item(?, ?);',
-      'SELECT ?, ?;',
-      hardwareItemID,
-      userID);
-
-  return { err, data };
-}
-
 export async function createHardwareItem() {
   return;
 }

@@ -15,7 +15,6 @@ import {
 } from './permissions.mjs';
 
 import {
-  checkHardwareItem,
   createHardwareItem,
   deleteHardwareItem,
   listHardwareItems,
@@ -65,18 +64,5 @@ router.route('/hardware_items/:hardware_item_id')
       // TODO (REG): Finalize this HTTP status code.
       res.status(200).end();
     });
-
-router.route('/hardware_items/:hardware_item_id/.check')
-  .post(
-    checkRequiredPermissions(HARDWARE_ITEMS_PERMISSIONS.CHECK),
-    async (req, res) => {
-      const data = await checkHardwareItem(
-          req.params.hardware_item_id,
-          req.body.user_id);
-
-      // TODO (REG): Finalize this HTTP status code.
-      res.status(200).json(data);
-    }
-  );
 
 export { router };
