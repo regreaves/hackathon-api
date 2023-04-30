@@ -27,16 +27,27 @@ app.use(cors({
   allowedHeaders: [
     'Authorization',
     'Content-Type'
-  ]
-//  maxAge: 86400,
-//  origin: CLIENT_ORIGIN_URL
+  ],
+  maxAge: 86400
+//  origin: process.env.CLIENT_ORIGIN_URL
 }));
 app.use(express.json());
-/*
 app.use(helmet({
-
+  contentSecurityPolicy: {
+    directives: {
+      "default-src": ["'none'"],
+      "frame-ancestors": ["'none'"],
+    },
+    frameguard: {
+      action: 'deny'
+    },
+    hsts: {
+      maxAge: 31536000
+    },
+    useDefaults: false
+  }
 }));
-*/
+
 app.use(nocache());
 
 app.use('/api', validateAccessToken, [
