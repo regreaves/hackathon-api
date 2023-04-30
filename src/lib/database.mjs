@@ -1,3 +1,9 @@
+/**
+ *
+ *  CORE DATABASE
+ *
+ */
+
 import mysqlx from '@mysql/xdevapi';
 
 export async function executeSQL(statement, ...bindings) {

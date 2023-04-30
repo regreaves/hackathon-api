@@ -21,6 +21,10 @@ import {
   router as hardware_items
 } from './services/hardware_items/router.mjs';
 
+import {
+  router as users
+} from './services/users/router.mjs';
+
 const app = express();
 
 app.use(cors({
@@ -47,12 +51,12 @@ app.use(helmet({
     useDefaults: false
   }
 }));
-
 app.use(nocache());
 
 app.use('/api', validateAccessToken, [
   event_applications,
-  hardware_items
+  hardware_items,
+  users
 ]);
 
 app.use((err, req, res, next) => {

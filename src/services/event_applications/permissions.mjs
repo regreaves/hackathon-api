@@ -1,3 +1,9 @@
+/**
+ *
+ *  EVENT APPLICATIONS PERMISSIONS
+ *
+ */
+
 export const EVENT_APPLICATIONS_PERMISSIONS = {
   CREATE: [ 'create:event_applications' ],
   DELETE: [ 'delete:event_applications' ],

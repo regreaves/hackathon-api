@@ -1,3 +1,9 @@
+/**
+ *
+ *  HARDWARE ITEMS ROUTER
+ *
+ */
+
 import express from 'express';
 
 import {
@@ -65,7 +71,7 @@ router.route('/hardware_items/:hardware_item_id/.check')
     checkRequiredPermissions(HARDWARE_ITEMS_PERMISSIONS.CHECK),
     async (req, res) => {
       const data = await checkHardwareItem(
-          req.body.hardware_item_id,
+          req.params.hardware_item_id,
           req.body.user_id);
 
       // TODO (REG): Finalize this HTTP status code.

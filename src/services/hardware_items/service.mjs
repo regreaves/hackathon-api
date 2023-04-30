@@ -1,3 +1,9 @@
+/**
+ *
+ *  HARDWARE ITEMS SERVICE
+ *
+ */
+
 import {
   executeSQL
 } from '../../lib/database.mjs';

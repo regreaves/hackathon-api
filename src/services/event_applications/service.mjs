@@ -1,3 +1,9 @@
+/**
+ *
+ *  EVENT APPLICATIONS SERVICE
+ *
+ */
+
 import {
   executeSQL
 } from '../../lib/database.mjs';

@@ -1,3 +1,9 @@
+/**
+ *
+ *  HARDWARE ITEMS PERMISSIONS
+ *
+ */
+
 export const HARDWARE_ITEMS_PERMISSIONS = {
   CHECK: [ 'check:hardware_items' ],
   CREATE: [ 'create:hardware_items' ],

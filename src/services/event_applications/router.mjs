@@ -1,3 +1,9 @@
+/**
+ *
+ *  EVENT APPLICATIONS ROUTER
+ *
+ */
+
 import express from 'express';
 
 import {

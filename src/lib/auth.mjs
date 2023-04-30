@@ -1,3 +1,9 @@
+/**
+ *
+ *  CORE AUTH
+ *
+ */
+
 import {
   auth,
   claimCheck,
