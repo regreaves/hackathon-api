@@ -1,7 +1,7 @@
 import express from 'express';
 
 import {
-  checkRequiredPermissions,
+  checkRequiredPermissions
 } from '../../lib/auth.mjs';
 
 import {
